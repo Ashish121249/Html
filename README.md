@@ -268,3 +268,245 @@
     <script src="script.js"></script>
 </body>
 </html>
+<!-- Hero Section -->
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h1>Welcome to Matka Play</h1>
+        <p>Experience the Thrilling World of Online Matka Gaming</p>
+        <button class="btn btn-play" onclick="scrollToGames()">Start Playing Now</button>
+    </div>
+</section>
+
+<!-- Games Section -->
+<section class="games" id="games">
+    <div class="container">
+        <h2>Popular Games</h2>
+        <div class="games-grid">
+            <!-- Game Cards -->
+            <div class="game-card">
+                <div class="game-icon">🎲</div>
+                <h3>Single</h3>
+                <p>Pick a single digit (0-9) and win big!</p>
+                <div class="odds">Odds: 1:9</div>
+                <button class="btn btn-game" onclick="openGame('single')">Play Now</button>
+            </div>
+
+            <div class="game-card">
+                <div class="game-icon">🎰</div>
+                <h3>Jodi</h3>
+                <p>Pick two digits and match them perfectly!</p>
+                <div class="odds">Odds: 1:99</div>
+                <button class="btn btn-game" onclick="openGame('jodi')">Play Now</button>
+            </div>
+
+            <div class="game-card">
+                <div class="game-icon">🃏</div>
+                <h3>Patti</h3>
+                <p>Choose three digits for higher rewards!</p>
+                <div class="odds">Odds: 1:999</div>
+                <button class="btn btn-game" onclick="openGame('patti')">Play Now</button>
+            </div>
+
+            <div class="game-card">
+                <div class="game-icon">💎</div>
+                <h3>Half Sangam</h3>
+                <p>Combine single and jodi for better chances!</p>
+                <div class="odds">Variable Odds</div>
+                <button class="btn btn-game" onclick="openGame('half-sangam')">Play Now</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Game Play Modal -->
+<div id="gameModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeGameModal()">&times;</span>
+        <h2 id="gameTitle">Single</h2>
+        
+        <div class="game-play-area">
+            <div class="input-section">
+                <label for="betAmount">Bet Amount (₹)</label>
+                <input type="number" id="betAmount" placeholder="Enter bet amount" min="10" max="10000">
+                
+                <label for="gameNumber">Select Number(s)</label>
+                <div id="numberInput"></div>
+                
+                <div class="bet-summary">
+                    <p>Bet Amount: <strong id="summaryBet">₹0</strong></p>
+                    <p>Potential Win: <strong id="summaryWin">₹0</strong></p>
+                </div>
+                
+                <button class="btn btn-submit" onclick="placeBet()">Place Bet</button>
+            </div>
+
+            <div class="info-section">
+                <h4>Game Rules</h4>
+                <ul id="gameRules"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Results Section -->
+<section class="results" id="results">
+    <div class="container">
+        <h2>Latest Results</h2>
+        <div class="results-container">
+            <div class="result-card">
+                <h4>Single Digit</h4>
+                <div class="result-number">7</div>
+                <p class="result-time">Today at 03:00 PM</p>
+            </div>
+
+            <div class="result-card">
+                <h4>Jodi</h4>
+                <div class="result-number">27</div>
+                <p class="result-time">Today at 03:00 PM</p>
+            </div>
+
+            <div class="result-card">
+                <h4>Patti</h4>
+                <div class="result-number">273</div>
+                <p class="result-time">Today at 03:00 PM</p>
+            </div>
+
+            <div class="result-card">
+                <h4>Half Sangam</h4>
+                <div class="result-number">7-27</div>
+                <p class="result-time">Today at 03:00 PM</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features">
+    <div class="container">
+        <h2>Why Choose Us?</h2>
+        <div class="features-grid">
+            <div class="feature">
+                <div class="feature-icon">🔒</div>
+                <h3>Secure & Safe</h3>
+                <p>Your data and transactions are fully encrypted and protected</p>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">⚡</div>
+                <h3>Fast Payouts</h3>
+                <p>Instant withdrawals to your bank account within minutes</p>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">📱</div>
+                <h3>Mobile Friendly</h3>
+                <p>Play anytime, anywhere on your mobile device</p>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">💰</div>
+                <h3>Big Rewards</h3>
+                <p>Daily bonuses and amazing rewards for our players</p>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">🎯</div>
+                <h3>Fair Play</h3>
+                <p>100% transparent and fair gaming guaranteed</p>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">👥</div>
+                <h3>24/7 Support</h3>
+                <p>Our customer support team is always ready to help</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="about" id="about">
+    <div class="container">
+        <h2>About Matka Play</h2>
+        <p>Matka Play is your ultimate destination for online matka gaming. With years of experience and thousands of satisfied players, we provide a safe, secure, and entertaining platform for matka enthusiasts.</p>
+        <p>Our commitment to fair play, transparent odds, and customer satisfaction makes us the preferred choice for players worldwide.</p>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#games">Games</a></li>
+                    <li><a href="#results">Results</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Responsible Gaming</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: support@matkaplay.com</p>
+                <p>Phone: +91-XXX-XXX-XXXX</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#">Facebook</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">Instagram</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Matka Play. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Login Modal -->
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeLoginModal()">&times;</span>
+        <h2>Login</h2>
+        <form class="auth-form">
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit" class="btn btn-submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="#" onclick="switchToSignup()">Sign Up</a></p>
+    </div>
+</div>
+
+<!-- Signup Modal -->
+<div id="signupModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeSignupModal()">&times;</span>
+        <h2>Sign Up</h2>
+        <form class="auth-form">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="tel" placeholder="Phone Number" required>
+            <input type="password" placeholder="Password" required>
+            <input type="password" placeholder="Confirm Password" required>
+            <button type="submit" class="btn btn-submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="#" onclick="switchToLogin()">Login</a></p>
+    </div>
+</div>
+
+<script src="script.js"></script>
